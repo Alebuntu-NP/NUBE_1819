@@ -1,0 +1,1 @@
+{"virtualbox":{"/home/alejandro/Escritorio":{"guestpath":"/home/alejandro/Escritorio","hostpath":"/var/www/html","disabled":false,"__vagrantfile":true},"/vagrant":{"guestpath":"/vagrant","hostpath":"/home/alejandro/Escritorio/ubuntu14","disabled":false,"__vagrantfile":true}}}
