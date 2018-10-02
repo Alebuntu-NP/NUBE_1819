@@ -1,1 +1,0 @@
-{"rsync":{"/vagrant":{"type":"rsync","guestpath":"/vagrant","hostpath":"/home/alejandro/Escritorio/Repositorios_del_GitHub/NUBE_1819_ALEJANDRO_ROMAN/Vagrant/debian9","disabled":false,"__vagrantfile":true,"owner":"vagrant","group":"vagrant"}}}
