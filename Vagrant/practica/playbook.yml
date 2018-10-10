@@ -1,0 +1,12 @@
+---
+- hosts: all
+  become: true
+  tasks:
+
+  - name: Just a Ping
+    ping:
+ 
+  - name: Install something
+    apt: name=apache2 
+   
+
