@@ -1,0 +1,27 @@
+---
+- hosts: all
+  become: true
+  tasks:
+   - name: Instalar apache
+     apt: 
+      name=apache2 
+      state=present 
+      update_cache=yes
+   - name: Instalar mysql
+     apt: 
+      name=mysql-server 
+      state=present 
+      update_cache=yes
+     apt: 
+      name=python-mysqldb 
+      state=present 
+      update_cache=yes
+   - name: Crear usuario pepe con contraseña 12345
+     mysql_user: 
+      login_user=root 
+      name=pepe 
+      password=12345 
+      priv=*.*:ALL,GRANT
+   - name: Crear base de datos
+     mysql_db: 
+      name=Wordpres
