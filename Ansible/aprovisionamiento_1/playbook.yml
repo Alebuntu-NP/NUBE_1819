@@ -1,0 +1,60 @@
+- hosts: all
+  become: true
+  tasks:
+    - name: Instalar los paquetes PHP necesarios
+      apt:
+        update_cache: yes
+        name: "{{ item }}"
+        state: present
+      with_items:
+        - php5
+        - php5-fpm
+        - php5-mysql
+        - php5-xmlrpc
+    - name: Instalar Apache con sus módulos
+      apt:
+        update_cache: yes
+        name: "{{ item }}"
+        state: present
+      with_items:
+        - apache2
+        - libapache2-mod-php5
+    - name: Instalar MySQL con sus dependencias
+      apt:
+        update_cache: yes
+        name: "{{ item }}"
+        state: present
+      with_items:
+        - mysql-server
+        - python-mysqldb
+    - name: Comprobar que los servicios están funcionando
+      service:
+        name: "{{ item }}"
+        state: started
+      with_items:
+        - apache2
+        - mysql
+    - name: Crear el usuario Pepe en MySQL con los permisos adecuados
+      mysql_user:
+        name: pepe
+        password: 123456
+        priv: "*.*:ALL"
+    - name: Crear la base de datos que posteriormente necesitaremos para wordpress
+      mysql_db:
+        name: wordpress
+        state: present
+    - name: Descargo el fichero de wordpress y lo dejo en el directorio correcto
+      get_url:
+        dest: /var/www/html/
+        url: https://es.wordpress.org/wordpress-4.9.8-es_ES.tar.gz
+    - name: Descomprimo el archivo
+      unarchive:
+        src: /var/www/html/wordpress-4.9.8-es_ES.tar.gz
+        dest: /var/www/html/ # required. Remote absolute path where the archive should be unpacked.
+        group: www-data
+        remote_src: yes # not required. Set to C(yes) to indicate the archived file is already on the remote system and not local to the Ansible controller.,This option is mutually exclusive with C(copy).
+        owner: www-data
+    - name: Borro el archivo comprimido
+      file:
+        path: /var/www/html/wordpress-4.9.8-es_ES.tar.gz
+        state: absent
