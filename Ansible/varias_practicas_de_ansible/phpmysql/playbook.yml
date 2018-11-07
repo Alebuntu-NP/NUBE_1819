@@ -1,13 +1,8 @@
-
 ---
 - hosts: all
   become: true
   roles:
-    - role: geerlingguy.php-mysql
-      php_packages: php5-mysql 
-      php_packages: php-cli
-         
-                    
-  tasks:
-    - name: Updates apt cache
-      action: apt update_cache=true
+    - role: geerlingguy.php-versions
+    - role: geerlingguy.apache 
+    - role: geerlingguy.php-mysql 
+

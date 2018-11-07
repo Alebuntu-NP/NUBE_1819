@@ -1,0 +1,27 @@
+---
+- hosts: all
+  become: true
+  vars:
+      moodle_db_name: moodle
+      moodle_db_username: moodle
+      moodle_db_password: moodle 
+      moodle_location:    /srv/moodle
+      moodle_dataroot:    /srv/moodledata
+      moodle_wwwroot:     http://moodle-vm.dev
+      moodle_version:     2.8
+ 
+  roles:
+
+    - role: geerlingguy.php-versions
+    - role: geerlingguy.mysql
+      mysql_user_home: /root
+      mysql_user_name: root
+      mysql_user_password: root
+      mysql_databases:
+        - name: alebuntu
+      mysql_users:
+        - name: alejandro
+          password: 2asirtriana
+          priv: "*.*:ALL"
+    - role: paulfantom.moodle      
+      
