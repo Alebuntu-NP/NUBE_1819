@@ -1,0 +1,17 @@
+---
+- hosts: all
+  become: true
+  roles: 
+    - role: geerlingguy.mysql
+      mysql_user_home: /root
+      mysql_user_name: root
+      mysql_user_password: root    
+      mysql_databases: 
+        - name: alebuntu
+      mysql_users:
+        - name: alejandro
+          password: 2asirtriana
+          priv: "*.*:ALL"
+  tasks:
+    - name: Updates apt cache
+      action: apt update_cache=true
