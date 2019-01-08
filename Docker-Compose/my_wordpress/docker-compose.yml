@@ -1,0 +1,31 @@
+version: '3.3'
+
+services:
+   database:
+     image: mysql:5.7.24
+     volumes:
+       - db_data:/var/lib/mysql
+     restart: always
+     ports:
+        - "3356:3306"
+     environment:
+       MYSQL_ROOT_PASSWORD: 2asirtriana
+       MYSQL_DATABASE: blog
+       MYSQL_USER: iestriana
+       MYSQL_PASSWORD: iestriana
+
+   wordpress:
+     depends_on:
+       - database
+     image: wordpress:latest
+     ports:
+       - "8000:80"
+     restart: always
+     environment:
+       WORDPRESS_DB_HOST: database:3306
+       WORDPRESS_DB_NAME: blog
+       WORDPRESS_DB_USER: iestriana
+       WORDPRESS_DB_PASSWORD: iestriana
+       WORDPRESS_TABLE_PREFIX: ies
+volumes:
+    db_data: {}
