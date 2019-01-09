@@ -12,13 +12,13 @@ RUN apt-get install -y php-pgsql
 RUN apt-get install -y php7.0-bcmath
 RUN apt-get install -y php7.0-gmp
 RUN apt-get install -y php-curl
-RUN apt-get install -y libapache2-mod-php php-mcrypt php-mysql
+RUN apt-get install -y libapache2-mod-php php-mcrypt php-mysql php-zip php7.0-mbstring php7.0-xml php7.0-gd
 
 #Instacion prestashop
-RUN apt-get install -y git
 WORKDIR /var/www/html/
-ADD  prestashop_1.7.5.0 /var/www/html
-RUN chown -R www-data:www-data /var/www/html/prestashop_1.7.5.0/
+COPY  prestashop /var/www/html/
+RUN chown -R www-data:www-data /var/www/html/
+RUN apt-get -y install php-intl
 EXPOSE 80/udp
 EXPOSE 80/tcp
-EXPOSE 3306/tcp
+
