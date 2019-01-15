@@ -1,0 +1,42 @@
+version: '3.3'
+
+services:
+   apa1:
+     image: httpd:latest
+     restart: always
+     hostname: apache1
+     networks:
+      red_apache:
+        ipv4_address: 192.168.1.2
+   apa2:
+     image: httpd:latest
+     restart: always
+     hostname: apache2
+     networks:
+      red_apache:
+        ipv4_address: 192.168.1.3
+
+   apa3:
+     image: httpd:latest
+     restart: always
+     hostname: apache3
+     networks:
+      red_apache:
+        ipv4_address: 192.168.1.4
+
+   varnish:
+     image: varnish
+     build: ./vanish
+     restart: always
+     networks:
+      red_apache:
+        ipv4_address: 192.168.1.5
+networks:
+   red_apache:
+     driver: bridge
+     ipam:
+      driver: default
+      config:
+      -
+       subnet: 192.168.1.0/24
+   

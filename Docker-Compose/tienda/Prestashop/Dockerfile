@@ -23,7 +23,7 @@ RUN chown -R www-data:www-data /var/www/html/
 RUN apt-get -y install php-intl
 RUN rm -rf index.html
 RUN a2enmod rewrite
-RUN /etc/init.d/apache2 restart
+CMD apachectl -D FOREGROUND
 EXPOSE 80/udp
 EXPOSE 80/tcp
 
