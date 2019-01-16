@@ -27,10 +27,6 @@ services:
    varnish:
      image: varnish
      build: ./vanish
-     depends_on:
-      - apa1
-      - apa2
-      - apa3
      networks:
       red_apache:
         ipv4_address: 192.168.1.5
