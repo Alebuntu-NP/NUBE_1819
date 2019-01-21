@@ -293,70 +293,7 @@ VALUES (6,9);
 INSERT INTO para(cod_so,cod_manual)
 VALUES (7,10);
 
-INSERT INTO usuarios ( nombre , apellido, edad, id ,correo_electronico, password,fecha_alta)
-VALUES ( 'Alejandro' , 'Román Caballero', 23, 'admin','admin@admin.com','7ed1ca45414f40612d0c469e24453e40',CURDATE());
-INSERT INTO usuarios ( nombre , apellido, edad, id ,correo_electronico, password,fecha_alta)
-VALUES ( 'a' , 'a', 999, 'a','a@a.com','7ed1ca45414f40612d0c469e24453e40',CURDATE());
-INSERT INTO usuarios ( nombre , apellido, edad, id ,correo_electronico, password,fecha_alta)
-VALUES ( 'b' , 'b', 999, 'b','b@b.com','7ed1ca45414f40612d0c469e24453e40',CURDATE());
-INSERT INTO usuarios ( nombre , apellido, edad, id ,correo_electronico, password,fecha_alta)
-VALUES ( 'c' , 'c', 999, 'c','c@c.com','7ed1ca45414f40612d0c469e24453e40',CURDATE());
-INSERT INTO usuarios ( nombre , apellido, edad, id ,correo_electronico, password,fecha_alta)
-VALUES ( 'd' , 'd', 999, 'd','d@d.com','7ed1ca45414f40612d0c469e24453e40',CURDATE());
-INSERT INTO usuarios ( nombre , apellido, edad, id ,correo_electronico, password,fecha_alta)
-VALUES ( 'e' , 'e', 999, 'e','e@e.com','7ed1ca45414f40612d0c469e24453e40',CURDATE());
-INSERT INTO usuarios ( nombre , apellido, edad, id ,correo_electronico, password,fecha_alta)
-VALUES ( 'f' , 'f', 999, 'f','f@f.com','7ed1ca45414f40612d0c469e24453e40',CURDATE());
-INSERT INTO usuarios ( nombre , apellido, edad, id ,correo_electronico, password,fecha_alta)
-VALUES ( 'g' , 'g', 999, 'g','g@g.com','7ed1ca45414f40612d0c469e24453e40',CURDATE());
 
-
-INSERT INTO `alebuntu`.`manuales` (`cod_manual`, `nombre`, `fecha_publicacion`, `fecha_revisado`, `n_pag`, `dificultad`,`enlace`)
-VALUES ('1', 'Nat', '2018-05-22', NULL, '25', 'Fácil','https://docs.google.com/document/d/1RiNCaBw9oZcBEsh7VeT-iUjfmInu_aeDPVJP-mM7_Q4/edit?usp=sharing');
-INSERT INTO `alebuntu`.`manuales` (`cod_manual`, `nombre`, `fecha_publicacion`, `fecha_revisado`, `n_pag`, `dificultad`,`enlace`)
-VALUES ('2', 'Bind9', '2018-11-15', NULL, '13', 'Fácil','https://docs.google.com/document/d/16vXCG2q-a6Ts1i4aE55JTxO1dIHwyDogcwNpVULO5Rc/edit?usp=sharing');
-INSERT INTO `alebuntu`.`manuales` (`cod_manual`, `nombre`, `fecha_publicacion`, `fecha_revisado`, `n_pag`, `dificultad`,`enlace`)
-VALUES ('3', 'Kerberos', '2018-11-15', NULL, '14', 'Fácil','https://docs.google.com/document/d/1vvy3Pi7yjsRVYkJAyPGSbsbj_IR_7jRgvx1fQMrZoDU/edit?usp=sharing');
-INSERT INTO `alebuntu`.`manuales` (`cod_manual`, `nombre`, `fecha_publicacion`, `fecha_revisado`, `n_pag`, `dificultad`,`enlace`)
-VALUES ('4', 'Openldap', '2018-11-15', NULL, '10', 'Media','https://docs.google.com/document/d/1DthxeqBsW071_Y_n8wUtUtVCaqlYOVbvijeDPrvqsZ8/edit?usp=sharing');
-INSERT INTO `alebuntu`.`manuales` (`cod_manual`, `nombre`, `fecha_publicacion`, `fecha_revisado`, `n_pag`, `dificultad`,`enlace`)
-VALUES ('5', 'Samba', '2018-11-15', NULL, '36', 'Media','https://docs.google.com/document/d/1NjXAAJqXFrFM5z7ZG9IYor8FmgB6jqisIyYwSGRocaI/edit?usp=sharing');
-INSERT INTO `alebuntu`.`manuales` (`cod_manual`, `nombre`, `fecha_publicacion`, `fecha_revisado`, `n_pag`, `dificultad`,`enlace`) 
-VALUES ('6', 'Window server 2008', '2018-05-27', NULL, '63', 'Media','https://docs.google.com/document/d/1tpBxtoYnWE-HhfEYeJmWVbNJoHxjvG1pmuAqo4Q9UH8/edit?usp=sharing');
-INSERT INTO `alebuntu`.`manuales` (`cod_manual`, `nombre`, `fecha_publicacion`, `fecha_revisado`, `n_pag`, `dificultad`,`enlace`) 
-VALUES ('7', 'Window server 2012', '2018-05-28', NULL, '216', 'Media','https://drive.google.com/file/d/1-NNLE9uUzpxkO80F0CcdpwCk88lIWOvx/view?usp=sharing');
-INSERT INTO `alebuntu`.`manuales` (`cod_manual`, `nombre`, `fecha_publicacion`, `fecha_revisado`, `n_pag`, `dificultad`,`enlace`) 
-VALUES ('8', 'LFS 7.5', '2018-09-16', NULL, '220', 'Difícil' , 'https://drive.google.com/file/d/1lp7ZppcicdV7CIMZo3AHuLAHqclhUE8B/view?usp=sharing');
-INSERT INTO `alebuntu`.`manuales` (`cod_manual`, `nombre`, `fecha_publicacion`, `fecha_revisado`, `n_pag`, `dificultad`,`enlace`) 
-VALUES ('9', 'LFS 8.3', '2019-01-09', NULL, '142', 'Difícil','https://docs.google.com/document/d/1ZQyY_Ci7lGLfoVuRl2ZjkxJL_IqPkH_oxsHty5jZidE/edit?usp=sharing');
-INSERT INTO `alebuntu`.`manuales` (`cod_manual`, `nombre`, `fecha_publicacion`, `fecha_revisado`, `n_pag`, `dificultad`,`enlace`) 
-VALUES ('10', 'Construccion de android',  '2018-11-06',NULL,  '16',  'Media','https://docs.google.com/document/d/1Mf1zh3Lz9deXt-t90VzyVYOi6Q-qj5RhMSKgF9q5V40/edit?usp=sharing');
-
-
-INSERT INTO sistema_operativo (nombre,version,jahr_de_lanzamiento)
-VALUES ('ubuntu','16.04 Xenial Xerus ',2016);
-INSERT INTO sistema_operativo (nombre,version,jahr_de_lanzamiento)
-VALUES ('debian','9.4 stretch',2018);
-INSERT INTO sistema_operativo (nombre,version,jahr_de_lanzamiento)
-VALUES ('window ','server 2008 standar',2008);
-INSERT INTO sistema_operativo (nombre,version,jahr_de_lanzamiento)
-VALUES ('window','server 2012 standar',2012);
-INSERT INTO sistema_operativo (nombre,version,jahr_de_lanzamiento)
-VALUES ('lfs','7.5',2014);
-INSERT INTO sistema_operativo (nombre,version,jahr_de_lanzamiento)
-VALUES ('lfs','8.3',2018);
-INSERT INTO sistema_operativo (nombre,version,jahr_de_lanzamiento)
-VALUES ('android','4.3 Jelly Bean',2012);
-  
-
-INSERT INTO para(cod_so,cod_manual)
-VALUES (2,1);
-INSERT INTO para(cod_so,cod_manual)
-VALUES (1,2);
-INSERT INTO para(cod_so,cod_manual)
-VALUES (1,3);
-INSERT INTO para(cod_so,cod_manual)
-VALUES (1,4);
 INSERT INTO para(cod_so,cod_manual)
 VALUES (1,5);
 INSERT INTO para(cod_so,cod_manual)
