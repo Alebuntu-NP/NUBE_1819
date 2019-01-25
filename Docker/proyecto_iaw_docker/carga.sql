@@ -257,7 +257,7 @@ VALUES ('10', 'Construccion de android',  '2018-11-06',NULL,  '16',  'Media','ht
 
 
 INSERT INTO sistema_operativo (nombre,version,jahr_de_lanzamiento)
-VALUES ('ubuntu','16.04 Xenial Xerus ',2016);
+VALUES ('ubuntu','16.04 Xenial Xerus',2016);
 INSERT INTO sistema_operativo (nombre,version,jahr_de_lanzamiento)
 VALUES ('debian','9.4 stretch',2018);
 INSERT INTO sistema_operativo (nombre,version,jahr_de_lanzamiento)
@@ -280,20 +280,6 @@ INSERT INTO para(cod_so,cod_manual)
 VALUES (1,3);
 INSERT INTO para(cod_so,cod_manual)
 VALUES (1,4);
-INSERT INTO para(cod_so,cod_manual)
-VALUES (1,5);
-INSERT INTO para(cod_so,cod_manual)
-VALUES (3,6);
-INSERT INTO para(cod_so,cod_manual)
-VALUES (4,7);
-INSERT INTO para(cod_so,cod_manual)
-VALUES (5,8);
-INSERT INTO para(cod_so,cod_manual)
-VALUES (6,9);
-INSERT INTO para(cod_so,cod_manual)
-VALUES (7,10);
-
-
 INSERT INTO para(cod_so,cod_manual)
 VALUES (1,5);
 INSERT INTO para(cod_so,cod_manual)
