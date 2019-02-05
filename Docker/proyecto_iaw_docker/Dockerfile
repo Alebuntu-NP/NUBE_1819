@@ -1,6 +1,6 @@
 FROM iestriana/lamp
 MAINTAINER Alejandro Roman Caballero
-RUN echo "START GOOD"
+RUN echo "START VERY GOOD"
 RUN apt-get -y update
 ADD inicioservicio.sh /usr/bin/
 RUN apt-get install -y git
